@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="si">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <title>Lanka TV & Radio Live</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark" aria-hidden="true">📡</div>
+    <div><h1>LANKA TV & RADIO</h1><p>Watch • Listen • Live</p></div>
+  </header>
+  <main>
+    <section class="player-section" aria-label="Famelack Sri Lanka TV player">
+      <div class="player-heading">
+        <span class="live-dot"></span>
+        <div><h2>Sri Lanka TV Channels</h2><p>Famelack TV directory • Select channels inside the player</p></div>
+      </div>
+      <div id="player" class="player-frame">
+        <iframe id="famelack-frame" src="https://famelack.com/tv/lk" title="Famelack Sri Lanka TV channels" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div class="controls">
+        <button id="fullscreen-btn" type="button">⛶ Full Screen</button>
+        <a class="open-stream" href="https://famelack.com/tv/lk" target="_blank" rel="noopener noreferrer">If player does not load, open Famelack directly ↗</a>
+      </div>
+      <p class="player-note">The Famelack page is loaded inside this player. If it appears blank or says it refused to connect, Famelack may block iframe embedding; in that case use “Open Famelack directly”. This site cannot bypass the provider’s browser security rules.</p>
+    </section>
+    <section class="info-panel">
+      <h2>භාවිතා කරන ආකාරය</h2>
+      <p>Player එක ඇතුළේ ඇති Famelack පිටුවෙන් චැනලය තෝරන්න. Full Screen බොත්තම ඔබලා player එක විශාල කරගන්න.</p>
+      <p>Famelack එක iframe තුළ පෙන්වීම අවහිර කර තිබුණොත් එය මෙහි බලන්න බැහැ. එවිට ඉහළ ඇති direct link එකෙන් විවෘත කරන්න.</p>
+    </section>
+  </main>
+  <footer><p>Unofficial directory wrapper. Channel streams and trademarks belong to their respective owners.</p><p>Streaming availability and mobile data charges depend on the service and mobile operator.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
