@@ -9,31 +9,50 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="brand-mark" aria-hidden="true">📡</div>
-    <div><h1>LANKA TV & RADIO</h1><p>Watch • Listen • Live</p></div>
+    <img class="site-logo" src="lanka-tv-radio-logo.png" alt="Lanka TV & Radio logo">
   </header>
+
   <main>
-    <section class="player-section" aria-label="Famelack Sri Lanka TV player">
+    <section class="player-section" aria-label="Media player">
       <div class="player-heading">
         <span class="live-dot"></span>
-        <div><h2>Sri Lanka TV Channels</h2><p>Famelack TV directory • Select channels inside the player</p></div>
+        <div>
+          <h2 id="now-title">Select a TV or Radio channel</h2>
+          <p id="now-type">Your selected channel will appear here</p>
+        </div>
       </div>
-      <div id="player" class="player-frame">
-        <iframe id="famelack-frame" src="https://famelack.com/tv/lk" title="Famelack Sri Lanka TV channels" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div id="player-shell" class="player-shell">
+        <div id="player" class="player-frame">
+          <div class="empty-player">
+            <div class="big-play">▶</div>
+            <h3>LIVE PLAYER</h3>
+            <p>Choose a channel below to start watching or listening.</p>
+          </div>
+        </div>
+        <button id="fullscreen-btn" class="fullscreen-btn" type="button" aria-label="Full screen">⛶ Full Screen</button>
       </div>
-      <div class="controls">
-        <button id="fullscreen-btn" type="button">⛶ Full Screen</button>
-        <a class="open-stream" href="https://famelack.com/tv/lk" target="_blank" rel="noopener noreferrer">If player does not load, open Famelack directly ↗</a>
-      </div>
-      <p class="player-note">The Famelack page is loaded inside this player. If it appears blank or says it refused to connect, Famelack may block iframe embedding; in that case use “Open Famelack directly”. This site cannot bypass the provider’s browser security rules.</p>
+      <p id="player-note" class="player-note">If the broadcaster blocks embedding, use “Open official stream”. Full Screen works for content that the browser allows to display.</p>
+      <a id="open-stream" class="open-stream hidden" href="#" target="_blank" rel="noopener noreferrer">Open official stream ↗</a>
     </section>
-    <section class="info-panel">
-      <h2>භාවිතා කරන ආකාරය</h2>
-      <p>Player එක ඇතුළේ ඇති Famelack පිටුවෙන් චැනලය තෝරන්න. Full Screen බොත්තම ඔබලා player එක විශාල කරගන්න.</p>
-      <p>Famelack එක iframe තුළ පෙන්වීම අවහිර කර තිබුණොත් එය මෙහි බලන්න බැහැ. එවිට ඉහළ ඇති direct link එකෙන් විවෘත කරන්න.</p>
+
+    <nav class="tabs" aria-label="Channel type">
+      <button class="tab active" data-tab="tv" type="button">📺 TV CHANNELS</button>
+      <button class="tab" data-tab="radio" type="button">📻 RADIO CHANNELS</button>
+    </nav>
+
+    <section class="channel-section">
+      <div class="section-top">
+        <h2 id="section-title">TV Channels</h2>
+        <span id="channel-count"></span>
+      </div>
+      <div class="channel-slider-wrap"><button class="slide-btn" id="slide-left" type="button" aria-label="Previous channels">‹</button><div id="channel-grid" class="channel-grid" aria-label="Slideable channel list"></div><button class="slide-btn" id="slide-right" type="button" aria-label="Next channels">›</button></div>
     </section>
   </main>
-  <footer><p>Unofficial directory wrapper. Channel streams and trademarks belong to their respective owners.</p><p>Streaming availability and mobile data charges depend on the service and mobile operator.</p></footer>
+
+  <footer>
+    <p>Unofficial directory • Channel logos and streams belong to their respective owners.</p>
+    <p>Streaming availability and mobile data charges depend on each broadcaster and mobile operator.</p>
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>

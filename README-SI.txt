@@ -1,8 +1,11 @@
-Lanka TV & Radio — Famelack Embed version
+Lanka TV & Radio Live — Updated layout
 
-1. Extract this ZIP.
-2. Open index.html or upload the whole Lanka-TV-Radio-Live folder to GitHub Pages.
-3. The page attempts to load https://famelack.com/tv/lk inside the main player. Channel selection is done inside the Famelack page.
-4. If the player is blank or refused to connect, Famelack likely blocks embedding. Use the “Open Famelack directly” link. A website cannot bypass the provider's iframe security restrictions.
+1. Upload all files in the Lanka-TV-Radio-Live folder to your GitHub Pages repository.
+2. Open index.html via your website.
+3. The channel list is a horizontal slider; use arrows or swipe/trackpad.
+4. Use Full Screen to enlarge the player.
+5. Select “Sri Lanka TV (Famelack)” to try loading https://famelack.com/tv/lk inside the player.
 
-Full Screen button requests fullscreen for the embedded frame where the browser allows it.
+Important: Famelack or a broadcaster may block embedding in other websites. If so, the browser will not allow its video to show inside this page; use “Open Famelack directly”. This site does not bypass those restrictions. The Full Screen button enlarges the page's player container; embedded content controls may remain controlled by the provider.
+
+Logo update: lanka-tv-radio-logo.png is used in the website header. Keep this image file alongside index.html when uploading to GitHub Pages.
